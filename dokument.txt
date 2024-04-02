@@ -35,6 +35,8 @@ Meie peaksime talle tagastama lõpuks siis auto, maksumuse ja leping haha?, pang
 *Peaks siis listi ja nimekirja ka uuendama koguaeg nimekirja põhjal. Ühesõnaga saame keerulisemaks teha.
 Tagastusmeetod kui auto toodi tagasi.
 
+Asukoha põhised meetodid Tallinn vs Tartu ja lisatransport kui vaja.
+
 -------------------
 
 Programm peab vastama järgmistele tingimustele.
