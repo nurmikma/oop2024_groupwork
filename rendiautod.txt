@@ -1,0 +1,48 @@
+Audi A4;2018;23.00;true
+BMW 3 Series;2019;28.50;true
+Mercedes-Benz C-Class;2020;30.20;true
+Volkswagen Transporter;2017;12.00;true
+Ford Transit;2018;13.50;true
+Mercedes-Benz Sprinter;2019;14.75;true
+Audi A6;2020;35.00;false
+BMW 5 Series;2018;32.50;false
+Mercedes-Benz E-Class;2019;38.20;false
+Volkswagen Crafter;2021;15.00;false
+Ford Transit Custom;2020;17.50;false
+Mercedes-Benz Vito;2018;16.75;false
+Audi A8;2021;40.00;false
+BMW 7 Series;2020;37.50;false
+Mercedes-Benz S-Class;2019;42.80;false
+Volkswagen Caddy;2017;11.50;true
+Ford Ranger;2018;16.00;true
+Mercedes-Benz X-Class;2019;18.75;true
+Audi Q5;2020;27.50;false
+BMW X3;2018;25.00;false
+Mercedes-Benz GLC;2019;29.90;false
+Volkswagen Amarok;2017;20.00;false
+Ford F-150;2018;22.50;false
+Mercedes-Benz GLE;2020;35.50;false
+Audi Q7;2019;32.00;false
+BMW X5;2018;30.50;false
+Mercedes-Benz GLS;2019;38.75;false
+Volkswagen Touareg;2020;34.00;false
+Ford Explorer;2018;27.50;false
+Mercedes-Benz EQC;2021;45.00;false
+Audi e-tron;2020;42.50;false
+BMW iX3;2021;40.00;false
+Mercedes-Benz EQA;2020;39.90;false
+Volkswagen ID.4;2021;37.00;false
+Ford Mustang Mach-E;2020;35.50;false
+Audi RS6;2021;55.00;false
+BMW M5;2020;52.50;false
+Mercedes-AMG E63;2019;58.20;false
+Volkswagen Golf;2017;15.00;true
+Ford Focus;2018;17.50;true
+Toyota Corolla;2019;18.00;true
+Hyundai i30;2020;19.25;true
+Honda Civic;2021;20.50;true
+Peugeot 308;2018;16.50;true
+Renault Megane;2019;17.75;true
+Mazda 3;2018;16.25;true
+Subaru Impreza;2019;18.50;true
+Kia Ceed;2020;19.75;true

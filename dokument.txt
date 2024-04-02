@@ -1,0 +1,33 @@
+Autode rendi süsteem:
+
+Loo programm, mis võimaldab kasutajal rentida autosid ja jälgida renditud autode staatust.
+Programm peaks võimaldama kasutajal valida rendiauto, sisestada rendiperioodi ning teha broneeringuid.
+Rakendus võib kasutada tekstipõhist I/O-d, et kuvada kasutajale rendiinfot ja broneeringute üksikasju.
+
+Selline struktuur võimaldab teil hallata autode rendi süsteemi, sealhulgas autode lisamist ja eemaldamist,
+autode otsimist vastavalt nende saadavusele ning broneeringute loomist ja tühistamist. Lisaks võimaldab
+see jälgida renditud autode staatust ja kliendi broneeringuid.
+
+Liides: Lisavarustus. Kui inimene soovib saab lisada täiendava kütuse, kindlustuse, lasteiste või juhi kaasa?
+
+Iga sõiduki tüübi jaoks arvutatakse eraldi maksumus konfitsentidega, tunni, päeva ja kuu põhiselt.
+
+Meetodid:
+
+lisaLisavarustus(lisavarustus): Meetod, mis võimaldab lisavarustuse lisamist sõidukile.
+
+Tavavautode hinnad tunnikohta jäävad vahemikku 15-25. luksusautod 25-40 ja kaubikud 10-15
+
+Loeme andmed listi sisse. Kui inimene teeb päringu, siis vastavalt soovile. Väljastab
+programm kolm saadaval autot, kasutades randomit. Kui sobivat autot pole saab ta
+uuesti kolm genereerida, aga eelmisi enam ei tohi näidata.
+
+Kujul : Renault ... Või Renault...
+        Bmw ...         Bmw...
+        Ciat ...        Vabu autosid pole rohkem...
+
+        Kasutajal on võimalik uuesti sisestada genereeri algusest uuesti, kui sobivat ikka ei leidnud.
+
+Lisaks peab sisestama inimene kas soovib lisavarustust, eeldatav km (kui läheb üle normi siis lisatasu), soovitav rendiaeg.
+Võime teha vanusepõhiselt ka mingi suurema riskikalkulatsiooniga hinna.
+Meie peaksime talle tagastama lõpuks siis auto, maksumuse ja leping haha?, pangalink, igal autol ka tagatisraha.
