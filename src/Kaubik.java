@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+
 public class Kaubik extends Masin {
+
+    private ArrayList<Kaubik> kaibikud = new ArrayList<>();
     private double kandevõime;
 
     public Kaubik(String mudel, int aasta, double rendihind, double kandevõime) {

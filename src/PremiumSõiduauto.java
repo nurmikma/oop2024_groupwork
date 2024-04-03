@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class PremiumSõiduauto extends Masin {
+    private ArrayList<PremiumSõiduauto> PremiumSõiduautod = new ArrayList<>();
     public PremiumSõiduauto(String mudel, int aasta, double rendihind) {
         super(mudel, aasta, rendihind);
     }
