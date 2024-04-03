@@ -3,26 +3,9 @@ import java.util.Date;
 import java.util.List;
 
 public class RendiSüsteem {
-    private List<Masin> autodeList = new ArrayList<>();
+
     private List<Broneering> broneeringuteList = new ArrayList<>();
 
-    public void lisaAuto(Masin auto) {
-        autodeList.add(auto);
-    }
-
-    public void eemaldaAuto(Masin auto) {
-        autodeList.remove(auto);
-    }
-
-    public List<Masin> otsiSaadavadAutod() {
-        List<Masin> saadavadAutod = new ArrayList<>();
-        for (Masin auto : autodeList) {
-            if (auto.isSaadaval()) {
-                saadavadAutod.add(auto);
-            }
-        }
-        return saadavadAutod;
-    }
 
     public void broneeriAuto(Masin auto, String kliendiNimi, Date rendiaeg) {
         auto.rendiAuto();
@@ -35,6 +18,7 @@ public class RendiSüsteem {
             if (broneering.getBroneeringuNr() == broneeringuNr) {
                 broneering.tühistaBroneering();
                 broneeringuteList.remove(broneering);
+                broneering.getAuto().tagastaAuto();
                 break;
             }
         }

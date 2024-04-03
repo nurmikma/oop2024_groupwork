@@ -35,4 +35,8 @@ public class Broneering {
         renditudAuto.tagastaAuto();
         renditudAuto = null;
     }
+
+    public Masin getAuto() {
+        return renditudAuto;
+    }
 }
