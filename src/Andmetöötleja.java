@@ -7,9 +7,9 @@ import java.util.Map;
 
 public class Andmetöötleja {
     //võtan listid ja need lisan dictionariesse.
-    public ArrayList<Masin> PremiumSõiduautod = new ArrayList<>();
-    public ArrayList<Masin> TavalineSõiduautod = new ArrayList<>();
-    public ArrayList<Masin> kaubikud = new ArrayList<>();
+    public ArrayList<PremiumSõiduauto> PremiumSõiduautod = new ArrayList<>();
+    public ArrayList<TavalineSõiduauto> TavalineSõiduautod = new ArrayList<>();
+    public ArrayList<Kaubik> kaubikud = new ArrayList<>();
     public Map<String, ArrayList<? extends Masin>> autodeDictionary = new HashMap<>();
 
     public Map<String, ArrayList<? extends Masin>> loeAutod(String failinimi) throws Exception {

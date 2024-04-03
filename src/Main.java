@@ -8,6 +8,9 @@ public class Main {
         return Math.round(soodus * 100.0) / 100.0;
     }
     public static void main(String[] args) {
+        System.out.println("Tere tulemast meie autorendisüsteemi! Teil on võimalik sisestada enda andmed ja vastavad soovid. \n" +
+                "Vastavalt neile saate valida sobiva auto, millega saate sõitma hakata \uD83D\uDE42");
+        System.out.println();
         Andmetöötleja andmetootleja = new Andmetöötleja();
 
         // Call the loeAutod method and catch any potential exceptions
