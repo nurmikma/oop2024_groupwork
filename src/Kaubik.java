@@ -2,17 +2,8 @@ import java.util.ArrayList;
 
 public class Kaubik extends Masin {
 
-    private ArrayList<Kaubik> kaubikud = new ArrayList<>();
-
-    public ArrayList<Kaubik> getKaubikud() {
-        return kaubikud;
-    }
-
-    private double kandevõime;
-
-    public Kaubik(String mudel, int aasta, double rendihind, double kandevõime, boolean saadavus) {
+    public Kaubik(String mudel, int aasta, double rendihind, boolean saadavus) {
         super(mudel, aasta, rendihind, saadavus);
-        this.kandevõime = kandevõime;
     }
 
     @Override
