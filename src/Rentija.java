@@ -1,21 +1,19 @@
-import java.time.LocalDate;
-
 public class Rentija {
     private int vanus;
     private String loatüüp;
     private int kauaOlnudLoad;
     private String soovitudAutotüüp;
     private double km;
-    private int rendiaeg;
+    private int renditudPäevad;
 
     // Konstruktor
-    public Rentija(int vanus, String loatüüp, int kauaOlnudLoad, String soovitudAutotüüp, double km, int rendiaeg) {
+    public Rentija(int vanus, String loatüüp, int kauaOlnudLoad, String soovitudAutotüüp, double km, int renditudPäevad) {
         this.vanus = vanus;
         this.loatüüp = loatüüp;
         this.kauaOlnudLoad = kauaOlnudLoad;
         this.soovitudAutotüüp = soovitudAutotüüp;
         this.km = km;
-        this.rendiaeg = rendiaeg;
+        this.renditudPäevad = this.renditudPäevad;
     }
 
     // Getterid ja setterid
@@ -59,12 +57,12 @@ public class Rentija {
         this.km = km;
     }
 
-    public int getRendiaeg() {
-        return rendiaeg;
+    public int getRenditudPäevad() {
+        return renditudPäevad;
     }
 
-    public void setRendiaeg(int rendiaeg) {
-        this.rendiaeg = rendiaeg;
+    public void setRenditudPäevad(int renditudPäevad) {
+        this.renditudPäevad = renditudPäevad;
     }
 
     public boolean onÕigustatudLoaOlnudAjaSoodustuseks() {

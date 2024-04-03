@@ -34,5 +34,6 @@ public class Masin {
     public void tagastaAuto() {
         this.saadavus = true;
     }
+    public abstract void rendiMaksumus();
 }
 
