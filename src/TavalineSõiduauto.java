@@ -18,6 +18,6 @@ public class TavalineSõiduauto extends Masin {
         }
 
 
-        return rendiSumma;
+        return Math.round(rendiSumma * 100.0) / 100.0;
     }
 }

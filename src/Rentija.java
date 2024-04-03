@@ -1,4 +1,5 @@
 public class Rentija {
+    private final String nimi;
     private int vanus;
     private String loatüüp;
     private int kauaOlnudLoad;
@@ -7,13 +8,14 @@ public class Rentija {
     private int renditudPäevad;
 
     // Konstruktor
-    public Rentija(int vanus, String loatüüp, int kauaOlnudLoad, String soovitudAutotüüp, double km, int renditudPäevad) {
+    public Rentija(String nimi, int vanus, String loatüüp, int kauaOlnudLoad, String soovitudAutotüüp, double km, int renditudPäevad) {
+        this.nimi = nimi;
         this.vanus = vanus;
         this.loatüüp = loatüüp;
         this.kauaOlnudLoad = kauaOlnudLoad;
         this.soovitudAutotüüp = soovitudAutotüüp;
         this.km = km;
-        this.renditudPäevad = this.renditudPäevad;
+        this.renditudPäevad = renditudPäevad;
     }
 
     // Getterid ja setterid

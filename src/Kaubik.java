@@ -16,6 +16,8 @@ public class Kaubik extends Masin {
         }else{
             rendiSumma = getRendihind() * rentija.getRenditudPäevad() * 0.7;
         }
-        return rendiSumma;
+
+
+        return Math.round(rendiSumma * 100.0) / 100.0;
     }
 }

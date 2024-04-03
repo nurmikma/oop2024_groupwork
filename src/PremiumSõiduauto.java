@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class PremiumSõiduauto extends Masin {
     public PremiumSõiduauto(String mudel, int aasta, double rendihind, boolean saadavus) {
         super(mudel, aasta, rendihind, saadavus);
@@ -17,6 +15,6 @@ public class PremiumSõiduauto extends Masin {
         }
 
 
-        return rendiSumma;
+        return Math.round(rendiSumma * 100.0) / 100.0;
     }
 }

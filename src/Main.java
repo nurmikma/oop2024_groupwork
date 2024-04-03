@@ -20,6 +20,7 @@ public class Main {
         // Example of iterating over the premium cars list
         for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("premium")) {
             System.out.println(auto.toString());
+            System.out.println(auto.rendiMaksumus(new Rentija("John Doe",4, "B", 4,"premium", 800, 12)));
         }
 
     }
