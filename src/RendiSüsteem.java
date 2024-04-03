@@ -23,10 +23,10 @@ public class RendiSüsteem {
             }
         }
     }
-    public ArrayList<Masin> SaadavadAutod(ArrayList<Masin> autod){
+    public ArrayList<Masin> SaadavadAutod(Rentija rentija, ArrayList<Masin> autod, double min, double max){
         ArrayList<Masin> saadavadAutod = new ArrayList<>();
         for (Masin auto : autod) {
-            if (auto.isSaadaval()) {
+            if (auto.isSaadaval() && auto.rendiMaksumus(rentija) >= min && auto.rendiMaksumus(rentija) <= max){
                 saadavadAutod.add(auto);
             }
         }
