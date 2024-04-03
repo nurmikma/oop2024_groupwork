@@ -2,7 +2,12 @@ import java.util.ArrayList;
 
 public class Kaubik extends Masin {
 
-    private ArrayList<Kaubik> kaibikud = new ArrayList<>();
+    private ArrayList<Kaubik> kaubikud = new ArrayList<>();
+
+    public ArrayList<Kaubik> getKaubikud() {
+        return kaubikud;
+    }
+
     private double kandevõime;
 
     public Kaubik(String mudel, int aasta, double rendihind, double kandevõime, boolean saadavus) {

@@ -15,14 +15,12 @@ public class Andmetöötleja {
                 boolean kasSaadaval = Boolean.parseBoolean(osad[3]);
                 String sõidukiTüüp = osad[4];
                 if (sõidukiTüüp.equals("premium")) {
-                    PremiumSõiduauto uusPremium = new PremiumSõiduauto(autoNimi, autoAasta, autoHind, kasSaadaval)
+                    PremiumSõiduauto uusPremium = new PremiumSõiduauto(autoNimi, autoAasta, autoHind, kasSaadaval);
+                    PremiumSõiduauto.add(uusPremium);
                 }
 
 
-                String tüüp = osad[1];
-                if (tüüp.equals("K")) {
-                    double rohimatus = Double.parseDouble(osad[2]);
-                    Kasvuhoonetaim uusTaim = new Kasvuhoonetaim(nimi, veevajadus, rohimatus);
+                private ArrayList<PremiumSõiduauto> PremiumSõiduautod = new ArrayList<>();
                     tulemus.add(uusTaim);
                 } else if (tüüp.equals("T")) {
                     boolean valgustatus = osad.length == 3;
