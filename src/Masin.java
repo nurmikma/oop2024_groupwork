@@ -1,4 +1,4 @@
-public class Masin {
+public abstract class Masin {
     private String mudel;
     private int aasta;
     private double rendihind;
@@ -34,6 +34,7 @@ public class Masin {
     public void tagastaAuto() {
         this.saadavus = true;
     }
-    public abstract void rendiMaksumus();
+
+    public abstract double rendiMaksumus(Rentija rentija);
 }
 

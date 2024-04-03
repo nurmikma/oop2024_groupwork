@@ -4,8 +4,8 @@ public class PremiumSõiduauto extends Masin {
     }
 
     @Override
-    public void rendiMaksumus(Rentija rentija) {
-        double rendiSumma = getRendihind() * rentija.getRenditudPäevad()
+    public double rendiMaksumus(Rentija rentija) {
+        double rendiSumma = getRendihind() * rentija.getRenditudPäevad();
         return rendiSumma;
     }
 }
