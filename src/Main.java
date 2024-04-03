@@ -9,7 +9,7 @@ public class Main {
         Andmetöötleja andmetootleja = new Andmetöötleja();
 
         // Call the loeAutod method and catch any potential exceptions
-        Map<String, ArrayList<Masin>> autodeDictionary = null;
+        Map<String, ArrayList<? extends Masin>> autodeDictionary = null;
         try {
             autodeDictionary = andmetootleja.loeAutod("rendiautod.txt");
             // Do something with the autodeDictionary if needed
@@ -17,6 +17,10 @@ public class Main {
             // Handle any exceptions that might occur during the method call
             e.printStackTrace();
         }
-        System.out.println(autodeDictionary);
+        // Example of iterating over the premium cars list
+        for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("premium")) {
+            System.out.println(auto.toString());
+        }
+
     }
 }

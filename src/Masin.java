@@ -35,6 +35,10 @@ public abstract class Masin {
         this.saadavus = true;
     }
 
+    public String toString() {
+        return "Mudel: " + mudel + ", Aasta: " + aasta + ", Rendihind: " + rendihind + ", Saadavus: " + saadavus;
+    }
+
     public abstract double rendiMaksumus(Rentija rentija);
 }
 

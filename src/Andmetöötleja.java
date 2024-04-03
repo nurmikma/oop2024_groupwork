@@ -10,8 +10,9 @@ public class Andmetöötleja {
     public ArrayList<Masin> PremiumSõiduautod = new ArrayList<>();
     public ArrayList<Masin> TavalineSõiduautod = new ArrayList<>();
     public ArrayList<Masin> kaubikud = new ArrayList<>();
-    public Map<String, ArrayList<Masin>> autodeDictionary = new HashMap<>();
-    public Map<String, ArrayList<Masin>> loeAutod(String failinimi) throws Exception {
+    public Map<String, ArrayList<? extends Masin>> autodeDictionary = new HashMap<>();
+
+    public Map<String, ArrayList<? extends Masin>> loeAutod(String failinimi) throws Exception {
 
 
         try (Scanner lugeja = new Scanner(new File(failinimi), "UTF-8")) {
