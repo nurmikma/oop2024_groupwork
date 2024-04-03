@@ -2,9 +2,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    public static double soodus(){
+        double soodus = Math.random()*60;
+        return Math.round(soodus * 100.0) / 100.0;
+    }
     public static void main(String[] args) {
         Andmetöötleja andmetootleja = new Andmetöötleja();
 
@@ -21,7 +23,8 @@ public class Main {
         for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("premium")) {
             System.out.println(auto.toString());
             System.out.println(auto.rendiMaksumus(new Rentija("John Doe",4, "B", 4,"premium", 800, 12)));
+            System.out.println("Soodus: "+soodus());
+            System.out.println(auto.rendiMaksumus(new Rentija("John Doe",4, "B", 4,"premium", 800, 12))-soodus());
         }
-
     }
 }
