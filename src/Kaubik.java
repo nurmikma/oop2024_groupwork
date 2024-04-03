@@ -5,8 +5,8 @@ public class Kaubik extends Masin {
     private ArrayList<Kaubik> kaibikud = new ArrayList<>();
     private double kandevõime;
 
-    public Kaubik(String mudel, int aasta, double rendihind, double kandevõime) {
-        super(mudel, aasta, rendihind);
+    public Kaubik(String mudel, int aasta, double rendihind, double kandevõime, boolean saadavus) {
+        super(mudel, aasta, rendihind, saadavus);
         this.kandevõime = kandevõime;
     }
 

@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class TavalineSõiduauto extends Masin {
     private ArrayList<TavalineSõiduauto> TavalisedSõiduautod = new ArrayList<>();
-    public TavalineSõiduauto(String mudel, int aasta, double rendihind) {
-        super(mudel, aasta, rendihind);
+    public TavalineSõiduauto(String mudel, int aasta, double rendihind, boolean saadavus) {
+        super(mudel, aasta, rendihind, saadavus);
     }
 
     @Override

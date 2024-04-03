@@ -15,11 +15,10 @@ public class Andmetöötleja {
                 boolean kasSaadaval = Boolean.parseBoolean(osad[3]);
                 String sõidukiTüüp = osad[4];
                 if (sõidukiTüüp.equals("premium")) {
-                    PremiumSõiduauto uusPremium = new PremiumSõiduauto(autoNimi, autoAasta, autoHind)
+                    PremiumSõiduauto uusPremium = new PremiumSõiduauto(autoNimi, autoAasta, autoHind, kasSaadaval)
                 }
 
 
-                }
                 String tüüp = osad[1];
                 if (tüüp.equals("K")) {
                     double rohimatus = Double.parseDouble(osad[2]);

@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class PremiumSõiduauto extends Masin {
     private ArrayList<PremiumSõiduauto> PremiumSõiduautod = new ArrayList<>();
-    public PremiumSõiduauto(String mudel, int aasta, double rendihind) {
-        super(mudel, aasta, rendihind);
+    public PremiumSõiduauto(String mudel, int aasta, double rendihind, boolean saadavus) {
+        super(mudel, aasta, rendihind, saadavus);
     }
 
     @Override

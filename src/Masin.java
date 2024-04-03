@@ -4,11 +4,11 @@ public abstract class Masin {
     private double rendihind;
     private boolean saadavus;
 
-    public Masin(String mudel, int aasta, double rendihind) {
+    public Masin(String mudel, int aasta, double rendihind, boolean saadavus) {
         this.mudel = mudel;
         this.aasta = aasta;
         this.rendihind = rendihind;
-        this.saadavus = true; // Alguses on auto saadaval
+        this.saadavus = saadavus;
     }
 
     public String getMudel() {
