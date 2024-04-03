@@ -1,12 +1,6 @@
 import java.util.ArrayList;
 
 public class PremiumSõiduauto extends Masin {
-    private ArrayList<PremiumSõiduauto> PremiumSõiduautod = new ArrayList<>();
-
-    public ArrayList<PremiumSõiduauto> getPremiumSõiduautod() {
-        return PremiumSõiduautod;
-    }
-
     public PremiumSõiduauto(String mudel, int aasta, double rendihind, boolean saadavus) {
         super(mudel, aasta, rendihind, saadavus);
     }

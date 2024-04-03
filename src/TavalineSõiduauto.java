@@ -1,11 +1,6 @@
 import java.util.ArrayList;
 
 public class TavalineSõiduauto extends Masin {
-    private ArrayList<TavalineSõiduauto> TavalisedSõiduautod = new ArrayList<>();
-
-    public ArrayList<TavalineSõiduauto> getTavalisedSõiduautod() {
-        return TavalisedSõiduautod;
-    }
 
     public TavalineSõiduauto(String mudel, int aasta, double rendihind, boolean saadavus) {
         super(mudel, aasta, rendihind, saadavus);

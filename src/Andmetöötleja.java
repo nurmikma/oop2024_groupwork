@@ -2,9 +2,16 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Andmetöötleja {
+    //võtan listid ja need lisan dictionariesse.
     public static List<Andmetöötleja> loeAutod(String failinimi) throws Exception {
+        ArrayList<PremiumSõiduauto> PremiumSõiduautod = new ArrayList<>();
+        ArrayList<TavalineSõiduauto> TavalineSõiduautod = new ArrayList<>();
+        ArrayList<Kaubik> kaubikud = new ArrayList<>();
+        Map<String, ArrayList<Masin>> autodeDictionary = new HashMap<>();
         try (Scanner lugeja = new Scanner(new File(failinimi), "UTF-8")) {
             while (lugeja.hasNextLine()) {
                 String rida = lugeja.nextLine();
@@ -16,18 +23,18 @@ public class Andmetöötleja {
                 String sõidukiTüüp = osad[4];
                 if (sõidukiTüüp.equals("premium")) {
                     PremiumSõiduauto uusPremium = new PremiumSõiduauto(autoNimi, autoAasta, autoHind, kasSaadaval);
-                    PremiumSõiduauto.add(uusPremium);
-                }
-
-
-                private ArrayList<PremiumSõiduauto> PremiumSõiduautod = new ArrayList<>();
-                    tulemus.add(uusTaim);
-                } else if (tüüp.equals("T")) {
-                    boolean valgustatus = osad.length == 3;
-                    Toataim uusTaim = new Toataim(nimi, veevajadus, valgustatus);
-                    tulemus.add(uusTaim);
+                    PremiumSõiduautod.add(uusPremium);
+                } else if (sõidukiTüüp.equals("tavaline")) {
+                    TavalineSõiduauto uusTavaline = new TavalineSõiduauto(autoNimi, autoAasta, autoHind, kasSaadaval);
+                    TavalineSõiduautod.add(uusTavaline);
+                } else {
+                    Kaubik uusKaubik = new Kaubik(autoNimi, autoAasta, autoHind, kasSaadaval);
+                    kaubikud.add(uusKaubik);
                 }
             }
+            autodeDictionary.put("premium", PremiumSõiduauto);
+            autodeDictionary.put("tavaline", TavalineSõiduautod);
+            autodeDictionary.put("kaubik", kaubikud);
         }
     }
 }
