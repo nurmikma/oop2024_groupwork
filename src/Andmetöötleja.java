@@ -7,11 +7,13 @@ import java.util.Map;
 
 public class Andmetöötleja {
     //võtan listid ja need lisan dictionariesse.
-    public static List<Andmetöötleja> loeAutod(String failinimi) throws Exception {
-        ArrayList<PremiumSõiduauto> PremiumSõiduautod = new ArrayList<>();
-        ArrayList<TavalineSõiduauto> TavalineSõiduautod = new ArrayList<>();
-        ArrayList<Kaubik> kaubikud = new ArrayList<>();
-        Map<String, ArrayList<Masin>> autodeDictionary = new HashMap<>();
+    public ArrayList<Masin> PremiumSõiduautod = new ArrayList<>();
+    public ArrayList<Masin> TavalineSõiduautod = new ArrayList<>();
+    public ArrayList<Masin> kaubikud = new ArrayList<>();
+    public Map<String, ArrayList<Masin>> autodeDictionary = new HashMap<>();
+    public Map<String, ArrayList<Masin>> loeAutod(String failinimi) throws Exception {
+
+
         try (Scanner lugeja = new Scanner(new File(failinimi), "UTF-8")) {
             while (lugeja.hasNextLine()) {
                 String rida = lugeja.nextLine();
@@ -32,9 +34,10 @@ public class Andmetöötleja {
                     kaubikud.add(uusKaubik);
                 }
             }
-            autodeDictionary.put("premium", PremiumSõiduauto);
+            autodeDictionary.put("premium", PremiumSõiduautod);
             autodeDictionary.put("tavaline", TavalineSõiduautod);
             autodeDictionary.put("kaubik", kaubikud);
         }
+        return autodeDictionary;
     }
 }
