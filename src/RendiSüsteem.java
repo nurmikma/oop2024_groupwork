@@ -23,4 +23,13 @@ public class RendiSüsteem {
             }
         }
     }
+    public ArrayList<Masin> SaadavadAutod(ArrayList<Masin> autod){
+        ArrayList<Masin> saadavadAutod = new ArrayList<>();
+        for (Masin auto : autod) {
+            if (auto.isSaadaval()) {
+                saadavadAutod.add(auto);
+            }
+        }
+        return saadavadAutod;
+    }
 }

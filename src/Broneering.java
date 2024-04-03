@@ -33,7 +33,6 @@ public class Broneering {
 
     public void tühistaBroneering() {
         renditudAuto.tagastaAuto();
-        renditudAuto = null;
     }
 
     public Masin getAuto() {
