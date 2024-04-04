@@ -52,24 +52,58 @@ public class Main {
                 System.out.println(auto.rendiMaksumus(new Rentija("John Doe", 4, "B", 4, "premium", 800, 12)) - soodus());
             }*/
         System.out.println(soovitudAutotüüp);
+        int index = 0;
         if (soovitudAutotüüp.strip().equals("premium")){
+
             for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("premium")) {
-                System.out.println(auto.toString());
-                System.out.println("Soodus: " + soodus());
-                System.out.println(auto.rendiMaksumus(uus));
+                if (autodeDictionary.get(soovitudAutotüüp).get(index).isSaadaval()){
+                    System.out.println((index +1) +": "  + auto.toString());
+                    System.out.println("Soodus: " + soodus());
+                    System.out.println(auto.rendiMaksumus(uus));
+                }
+                index++;
+
+
             }
+            index = 0;
+
         } else if (soovitudAutotüüp.strip().equals("tavaline")) {
-            for (TavalineSõiduauto auto : (ArrayList<TavalineSõiduauto>) autodeDictionary.get("tavaline")) {
-                System.out.println(auto.toString());
-                System.out.println("Soodus: " + soodus());
-                System.out.println(auto.rendiMaksumus(uus));
+            for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("tavaline")) {
+                if (autodeDictionary.get(soovitudAutotüüp).get(index).isSaadaval()){
+                    System.out.println((index +1) +": "  + auto.toString());
+                    System.out.println("Soodus: " + soodus());
+                    System.out.println(auto.rendiMaksumus(uus));
+                }
+                index++;
+
+
             }
+            index = 0;
         } else if (soovitudAutotüüp.strip().equals("kaubik")) {
-            for (Kaubik auto : (ArrayList<Kaubik>) autodeDictionary.get("kaubik")) {
-                System.out.println(auto.toString());
+            for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("kaubik")) {
+                if (autodeDictionary.get(soovitudAutotüüp).get(index).isSaadaval()){
+                    System.out.println((index +1) +": "  + auto.toString());
+                    System.out.println("Soodus: " + soodus());
+                    System.out.println(auto.rendiMaksumus(uus));
+                }
+                index++;
+
+
+            }
+            index = 0;
+        }
+        /*String renditav = JOptionPane.showInputDialog(null, "Sisesta auto number ", "Auto rentimine", JOptionPane.QUESTION_MESSAGE);
+        int rent = Integer.parseInt(renditav);
+        System.out.println(autodeDictionary.get(soovitudAutotüüp).get(rent - 1));
+        autodeDictionary.get(soovitudAutotüüp).get(rent - 1).rendiAuto();
+        for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("premium")) {
+            if (autodeDictionary.get(soovitudAutotüüp).get(index).isSaadaval()){
+                System.out.println((index +1) +": "  + auto.toString());
                 System.out.println("Soodus: " + soodus());
                 System.out.println(auto.rendiMaksumus(uus));
             }
-        }
+
+        index++;}
+        index = 0;*/
     }
 }
