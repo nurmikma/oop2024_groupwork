@@ -37,25 +37,27 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        while(true) {
+
             if (uus.getSoovitudAutotüüp() == "premium"){
                 for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("premium")) {
                     System.out.println(auto.toString());
                     System.out.println("Soodus: " + soodus());
-                    System.out.println(auto.rendiMaksumus(new Rentija(uus));
+                    System.out.println(auto.rendiMaksumus(uus));
                 }
             } else if (uus.getSoovitudAutotüüp() == "tavaline") {
                 for (TavalineSõiduauto auto : (ArrayList<TavalineSõiduauto>) autodeDictionary.get("tavaline")) {
                     System.out.println(auto.toString());
                     System.out.println("Soodus: " + soodus());
-                    System.out.println(auto.rendiMaksumus(new Rentija(uus));
+                    System.out.println(auto.rendiMaksumus(uus));
                 }
             } else {
                 for (Kaubik auto : (ArrayList<Kaubik>) autodeDictionary.get("kaubik")) {
                     System.out.println(auto.toString());
                     System.out.println("Soodus: " + soodus());
-                    System.out.println(auto.rendiMaksumus(new Rentija(uus));
+                    System.out.println(auto.rendiMaksumus(uus));
+                }
             }
-        }
+
+
     }
 }
