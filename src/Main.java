@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JOptionPane;
 
 public class Main {
     public static double soodus(){
@@ -10,7 +11,13 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Tere tulemast meie autorendisüsteemi! Teil on võimalik sisestada enda andmed ja vastavad soovid. \n" +
                 "Vastavalt neile saate valida sobiva auto, millega saate sõitma hakata \uD83D\uDE42");
-        System.out.println();
+        String rentijaNimi = JOptionPane.showInputDialog(null, "Sisesta nimi ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
+        String rentijaVanus = JOptionPane.showInputDialog(null, "Sisesta vanus ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
+        String loatüüp = JOptionPane.showInputDialog(null, "Sisesta loatüüp (B, C, või B ja C ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
+        String distants = JOptionPane.showInputDialog(null, "Sisesta läbitava distantsi pikkus ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
+        String päevadeArv = JOptionPane.showInputDialog(null, "Sisesta renditavate päevade arv ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
+
+        System.out.println(rentijaNimi);
         Andmetöötleja andmetootleja = new Andmetöötleja();
 
         // Call the loeAutod method and catch any potential exceptions
