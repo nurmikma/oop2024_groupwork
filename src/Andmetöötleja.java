@@ -14,7 +14,7 @@ public class Andmetöötleja {
 
     public Map<String, ArrayList<? extends Masin>> loeAutod(String failinimi) throws Exception {
 
-
+        //loeb andmed failist sisse, muudab vastavateks objektideks ja lisab listidesse, mille omakorda hashmapi
         try (Scanner lugeja = new Scanner(new File(failinimi), "UTF-8")) {
             while (lugeja.hasNextLine()) {
                 String rida = lugeja.nextLine();

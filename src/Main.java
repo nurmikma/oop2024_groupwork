@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        //rentija andmete kogumine
         System.out.println("Tere tulemast meie autorendisüsteemi! Teil on võimalik sisestada enda andmed ja vastavad soovid. \n" +
                 "Vastavalt neile saate valida sobiva auto, millega saate sõitma hakata \uD83D\uDE42");
         String rentijaNimi = JOptionPane.showInputDialog(null, "Sisesta nimi ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
@@ -51,7 +51,10 @@ public class Main {
                 System.out.println("Soodus: " + soodus());
                 System.out.println(auto.rendiMaksumus(new Rentija("John Doe", 4, "B", 4, "premium", 800, 12)) - soodus());
             }*/
-        System.out.println(soovitudAutotüüp);
+
+
+        //leiame sobivada autod
+
         int index = 0;
         if (soovitudAutotüüp.strip().equals("premium")){
 
@@ -92,6 +95,7 @@ public class Main {
             }
             index = 0;
         }
+        //rentimine
         String renditav = JOptionPane.showInputDialog(null, "Sisesta auto number ", "Auto rentimine", JOptionPane.QUESTION_MESSAGE);
         int rent = Integer.parseInt(renditav);
         autodeDictionary.get(soovitudAutotüüp).get(rent - 1).rendiAuto();

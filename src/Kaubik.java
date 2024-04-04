@@ -7,6 +7,7 @@ public class Kaubik extends Masin {
     }
 
     @Override
+    //arvuta kui palju rent maksab
     public double rendiMaksumus(Rentija rentija) {
         double rendiSumma;
         if(rentija.getRenditudPäevad() <= 3){
