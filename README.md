@@ -15,3 +15,9 @@ iga rühmaliikme panus (sh tehtud klassid/meetodid) ja ajakulu (orienteeruvalt);
 tegemise mured (nt millistest teadmistest/oskustest tundsite projekti tegemisel puudust);
 hinnang oma töö lõpptulemusele (millega saite hästi hakkama ja mis vajab arendamist);
 selgitus ja/või näited, kuidas programmi osi eraldi ja programmi tervikuna testisite ehk kuidas veendusite, et programm töötab korrektselt.
+
+
+Tööjaotus:
+  Markus Nurmik: Mõtles idee välja, kirjutas andmetöötluse baasi ja main meetodi loopi
+
+  Mihkel Maspanov: Kirjutas meetodite funktsioonid ja viimistles andmetöötluse meetodit
