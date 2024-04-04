@@ -37,9 +37,9 @@ public abstract class Masin {
 
     public String toString() {
         if(saadavus){
-        return "Mudel: " + mudel + ", Aasta: " + aasta + ", Rendihind: " + rendihind + ", Saadavus: " + saadavus;
+        return "Mudel: " + mudel + ", Aasta: " + aasta + ", Rendihind: " + rendihind;
         }else{
-            return "Mudel: " + mudel + ", Aasta: " + aasta + ", Rendihind: " + rendihind + ", Saadavus: " + saadavus + " (Renditud)";
+            return "";
     }}
 
     public abstract double rendiMaksumus(Rentija rentija);

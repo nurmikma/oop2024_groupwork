@@ -92,6 +92,10 @@ public class Main {
             }
             index = 0;
         }
+        String renditav = JOptionPane.showInputDialog(null, "Sisesta auto number ", "Auto rentimine", JOptionPane.QUESTION_MESSAGE);
+        int rent = Integer.parseInt(renditav);
+        autodeDictionary.get(soovitudAutotüüp).get(rent - 1).rendiAuto();
+        System.out.println("Rentisid auto: " + autodeDictionary.get(soovitudAutotüüp).get(rent - 1).toString());
         /*String renditav = JOptionPane.showInputDialog(null, "Sisesta auto number ", "Auto rentimine", JOptionPane.QUESTION_MESSAGE);
         int rent = Integer.parseInt(renditav);
         System.out.println(autodeDictionary.get(soovitudAutotüüp).get(rent - 1));
