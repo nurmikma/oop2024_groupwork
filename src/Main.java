@@ -19,45 +19,33 @@ public class Main {
         String soovitudAutotüüp = JOptionPane.showInputDialog(null, "Mis autotüüpi soovid (premium, tavaline, kaubik) ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
         String distants = JOptionPane.showInputDialog(null, "Sisesta läbitava distantsi pikkus ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
         String päevadeArv = JOptionPane.showInputDialog(null, "Sisesta renditavate päevade arv ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
-        String soovitudMaksumus = JOptionPane.showInputDialog(null, "Kui palju sa oleksid nõus oma rendi eest kokku maksma, teeme sulle " +
-                "vastava pakkumise (premium(150-200päev), tavaline(80-100päev), kaubik(100-120päev)) ", "Andmete sisestamine", JOptionPane.QUESTION_MESSAGE);
 
         int uus_rentijaVanus = Integer.parseInt(rentijaVanus);
         int uus_kauaOlnudLoad = Integer.parseInt(kauaOlnudLoad);
         double uus_distants = Double.parseDouble(distants);
         int uus_päevadeArv = Integer.parseInt(päevadeArv);
-        double uus_SoovitudMaksumus = Double.parseDouble(soovitudMaksumus);
 
         Rentija uus = new Rentija(rentijaNimi, uus_rentijaVanus, loatüüp, uus_kauaOlnudLoad, soovitudAutotüüp, uus_distants, uus_päevadeArv);
         Andmetöötleja andmetootleja = new Andmetöötleja();
 
+        // Call the loeAutod method and catch any potential exceptions
         Map<String, ArrayList<? extends Masin>> autodeDictionary = null;
         try {
             autodeDictionary = andmetootleja.loeAutod("rendiautod.txt");
+            // Do something with the autodeDictionary if needed
         } catch (Exception e) {
+            // Handle any exceptions that might occur during the method call
             e.printStackTrace();
         }
+        while(true) {
 
-            if (uus.getSoovitudAutotüüp() == "premium"){
-                for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("premium")) {
-                    System.out.println(auto.toString());
-                    System.out.println("Soodus: " + soodus());
-                    System.out.println(auto.rendiMaksumus(uus));
-                }
-            } else if (uus.getSoovitudAutotüüp() == "tavaline") {
-                for (TavalineSõiduauto auto : (ArrayList<TavalineSõiduauto>) autodeDictionary.get("tavaline")) {
-                    System.out.println(auto.toString());
-                    System.out.println("Soodus: " + soodus());
-                    System.out.println(auto.rendiMaksumus(uus));
-                }
-            } else {
-                for (Kaubik auto : (ArrayList<Kaubik>) autodeDictionary.get("kaubik")) {
-                    System.out.println(auto.toString());
-                    System.out.println("Soodus: " + soodus());
-                    System.out.println(auto.rendiMaksumus(uus));
-                }
-            }
-
-
+            // Example of iterating over the premium cars list
+            /*for (PremiumSõiduauto auto : (ArrayList<PremiumSõiduauto>) autodeDictionary.get("premium")) {
+                System.out.println(auto.toString());
+                System.out.println(auto.rendiMaksumus(new Rentija("John Doe", 4, "B", 4, "premium", 800, 12)));
+                System.out.println("Soodus: " + soodus());
+                System.out.println(auto.rendiMaksumus(new Rentija("John Doe", 4, "B", 4, "premium", 800, 12)) - soodus());
+            }*/
+        }
     }
 }
